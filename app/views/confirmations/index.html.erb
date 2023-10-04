@@ -1,0 +1,26 @@
+
+<div id="confirmations">
+ 
+  <table class='table table-bordered'>
+    <tr>
+      <th>Nombre</th>
+      <th>Teléfono</th>
+      <th>Confirmado</th>
+    </tr>
+  <% @confirmations.each do |confirmation| %>
+     <tr>
+       <td style='color:white'><%= confirmation.name %> </td>
+        <td style='color:white'><%= confirmation.phone %> </td>
+        <td style='color:white'>
+          <% if confirmation.confirm %> 
+            <i class='fa fa-check-circle-o' style='color:#BDAA78'></i>
+          <% else %>
+            <i class='fa fa-times-circle-o' style='color:red'></i>
+          <% end %>
+        </td>
+      </tr>
+  <% end %>
+  </table>
+</div>
+
+ 

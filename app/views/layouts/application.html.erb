@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>XV</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+
+    	<!-- Fav and touch icons -->
+    <link rel="shortcut icon" type="image/jpg" href="<%= asset_path("fav_touch_icons/favicon.jpg")%>" />
+    <link rel="apple-touch-icon" href="<%= asset_path("fav_touch_icons/apple-touch-icon.png")%>" />
+    <link rel="apple-touch-icon" sizes="72x72" href="<%= asset_path("fav_touch_icons/apple-touch-icon-72x72.png")%>" />
+    <link rel="apple-touch-icon" sizes="114x114" href="<%= asset_path("fav_touch_icons/apple-touch-icon-114x114.png")%>" />
+	
+
+    <%# stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <link href="http://fonts.googleapis.com/css?family=Dancing+Script:700%7COpen+Sans%7COpen+Sans+Condensed:300" rel="stylesheet" type="text/css">
+       <%= stylesheet_link_tag 'bootstrap', media: 'all' %>
+    <%= stylesheet_link_tag 'style', media: 'all' %>
+ 
+    
+  </head>
+  <title>XV</title>
+  <body>
+ 
+
+	<!-- BEGIN WRAPPER -->
+	<div id="wrapper">
+	
+		<!-- BEGIN HEADER -->
+		 
+		<!-- END HEADER -->
+		
+		<!-- BEGIN HOME SECTION -->
+		<section id="home" class="divider-bottom-1">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="hero-title curve">XV Daniela</div>
+						<div class="hero-text">Confirmaciones</div>
+            <span style='color:white'>Confirmados hasta el momento: <%= @confirmations.where(confirm: true).count %></span>
+            <br>
+            <span style='color:white'>Cancelados hasta el momento: <%= @confirmations.where(confirm: false).count %></span>
+            <br>
+            <br>
+      <div class="hero-divider"></div>
+						
+						<div class="xcountdown">
+            <%= yield %>
+            </div> <!-- Countdown container. Check the bottom of the document where the countdown is being initialized. -->
+						
+						<div class="hero-divider"></div>
+					</div>
+				</div>
+			</div>
+			
+			 
+		</section>
+		<!-- END HOME SECTION -->
+		
+	 
+		<!-- BEGIN FOOTER -->
+		<footer id="footer" class="bg-color pattern">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<p>&copy; 2015 Lilac - Responsive One-Page Wedding HTML5 Template. All rights reserved. Developed by <a href="http://www.wiselythemes.com" target="_blank">WiselyThemes</a>.</p>
+						
+						<!-- BEGIN SOCIAL ICONS -->
+						<ul class="sn-icons">
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+						</ul>
+						<!-- END SOCIAL ICONS -->
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- END FOOTER -->
+		
+	</div>
+	<!-- END WRAPPER -->
+
+    <%= yield %>
+  </body>
+</html>

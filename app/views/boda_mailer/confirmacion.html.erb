@@ -1,0 +1,16 @@
+<h1>Confirmacion de XV</h1>
+
+<p>
+   Buen dia, <%= @confirmation.name %> <br>  registro su confirmacion con los siguientes datos:
+
+   <ul>
+      <li>Nombre: <%= @confirmation.name %></li>
+      <li>Telefono: <%= @confirmation.phone %></li>
+      <li>Confirmacion: <b><%if @confirmation.confirm %>Si asistira<% else %>No asistira<% end %></b></li> 
+    </ul>
+  <% if @confirmation.comment.present? %>
+    <p>Adicionalmente dejo el siguiente comentario: <br> <%= @confirmation.comment %></p>  
+  <% end %>
+  
+  Si deseas ver la lista de confirmaciones puedes hacerlo en el siguiente enlace: <a href=''>Ver confirmaciones</a>
+</p>
