@@ -9,6 +9,6 @@ class BodaMailer < ApplicationMailer
    
     @confirmation = Confirmation.find(id)
 
-    mail to: "alopez@fidelis.gt;heidymaria1111@gmail.com", subject: "Confirmación de asistencia a la boda por #{@confirmation.name}"
+    mail to: "luisguerra89@gmail.com;areli_4407@hotmail.com", subject: "Confirmación de asistencia a la boda por #{@confirmation.name}"
   end
 end
