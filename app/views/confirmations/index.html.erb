@@ -5,12 +5,17 @@
     <tr>
       <th>Nombre</th>
       <th>Teléfono</th>
+      <th>Fecha Confirmacion</th>
+      <th>Comentario</th>
+      
       <th>Confirmado</th>
     </tr>
   <% @confirmations.each do |confirmation| %>
      <tr>
        <td style='color:white'><%= confirmation.name %> </td>
         <td style='color:white'><%= confirmation.phone %> </td>
+        <td style='color:white'><%= confirmation.created_at %> </td>
+        <td style='color:white'><%= confirmation.comment %> </td>
         <td style='color:white'>
           <% if confirmation.confirm %> 
             <i class='fa fa-check-circle-o' style='color:#BDAA78'></i>
