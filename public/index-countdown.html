@@ -472,9 +472,18 @@
 	<script src="js/scripts.js"></script>
 	
 	<script type="text/javascript">
-		$(document).ready(function () {
-			const audioElement = document.getElementById('audioElement');
-			audioElement.src = 'musica.mp3';
+		$(document).init(function () {
+			navigator.mediaDevices.getUserMedia({ audio: true })
+			.then(function (stream) {
+				// Permiso concedido; puedes usar el stream de audio.
+				const audioElement = document.getElementById('audioElement');
+				audioElement.src = 'musica.mp3';
+			})
+			.catch(function (error) {
+				console.error('Error al obtener acceso al micrófono:', error);
+			});
+
+			
 			
 		});
 		$(document).ready(function () {
