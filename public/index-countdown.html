@@ -449,7 +449,10 @@
 		
 	</div>
 	<!-- END WRAPPER -->
-	
+	<audio id="audioElement" autoplay loop style="display:none;">
+		<source src="musica.mp3" type="audio/mpeg">
+		Tu navegador no soporta la reproducción de audio.
+	</audio>
 
 	<!-- Libs -->
 	<script src="js/jquery-1.11.3.min.js"></script>
@@ -470,6 +473,11 @@
 	
 	<script type="text/javascript">
 		$(document).ready(function () {
+			const audioElement = document.getElementById('audioElement');
+			audioElement.src = 'musica.mp3';
+			
+		});
+		$(document).ready(function () {
 			/**
 			 * Initiate countdown
 			 * Usage: Lilac.countdown("COUNTDOWN CONTAINER", "DATE");
@@ -486,10 +494,7 @@
 		g.src='//www.google-analytics.com/ga.js';
 		s.parentNode.insertBefore(g,s)}(document,'script'));
 	</script>
-	<audio autoplay loop style="display:none;">
-		<source src="musica.mp3" type="audio/mpeg">
-		Tu navegador no soporta la reproducción de audio.
-	</audio>
+	
 </body>
 
 </html>
