@@ -6,6 +6,7 @@
    <ul>
       <li>Nombre: <%= @confirmation.name %></li>
       <li>Telefono: <%= @confirmation.phone %></li>
+      <li>Comentario: <%= @confirmation.comment %></li>
       <li>Confirmacion: <b><%if @confirmation.confirm %>Si asistira<% else %>No asistira<% end %></b></li> 
     </ul>
   <% if @confirmation.comment.present? %>
