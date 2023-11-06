@@ -5,7 +5,7 @@ var map_markers = [
 		"latitude": 14.4042534,
 		"longitude": -90.6983809,
 		"icon":"fa-map-marker", //Check the full list of icons at http://fortawesome.github.io/Font-Awesome/icons/
-		"infoWindow":"Lugar: CATEDRAL SAN CRISTOBAL<br>Direccion: Calle Central 1ra Avenida, Zona 1, Palin, Escuintla"
+		"infoWindow":"Lugar: PARROQUIA SAN CRISTOBAL<br>Direccion: Calle Central 1ra Avenida, Zona 1, Palin, Escuintla"
 	} ,
   {
 		"title": "Recepcion",
