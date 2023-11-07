@@ -10,7 +10,7 @@ class ConfirmationsController < ApplicationController
      confirmation.confirm = (params[:field0_value] == 'si')
      
      confirmation.save
-     confirmation.notificar
+     #confirmation.notificar
      render html: 'ok'
   end
 
